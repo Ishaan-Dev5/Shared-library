@@ -1,12 +1,12 @@
 def call() {
-    echo "Running unit tests in current directory"
+    // Clone the repo
+    git url: 'https://github.com/OT-MICROSERVICES/salary-api.git', branch: 'main'
 
-    try {
-        // Hardcoded command for unit tests
-        sh 'mvn clean test'
-        echo "Unit tests completed successfully."
-    } catch (err) {
-        echo "Unit tests failed!"
-        error("Stopping pipeline due to failed tests.")
-    }
+    echo "Running unit tests"
+    sh 'mvn clean test'
+
+    echo "Archiving test reports"
+    archiveArtifacts artifacts: 'target/surefire-reports/*.xml', fingerprint: true
+
+    echo "Unit tests completed successfully and reports archived!"
 }
