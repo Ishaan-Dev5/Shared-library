@@ -1,6 +1,6 @@
 def call() {
     // Clone the repo
-    git url: 'https://github.com/OT-MICROSERVICES/salary-api.git', branch: 'main'
+    git url: 'https://github.com/Ishaan-Dev5/salary-api.git', branch: 'main'
 
     echo "Running unit tests"
     sh 'mvn test -e' 
