@@ -3,6 +3,7 @@ def call(String odcInstallation) {
     def reportDir  = 'dependency-check-report'
     def reportFile = 'dc-report.html'
     def projectName = 'Golang'
+    
 
     
     sh "mkdir -p ${nvdDbPath}"
