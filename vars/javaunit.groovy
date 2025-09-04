@@ -3,7 +3,7 @@ def call() {
     git url: 'https://github.com/OT-MICROSERVICES/salary-api.git', branch: 'main'
 
     echo "Running unit tests"
-    sh 'mvn test -Dgroups="!integration"' 
+    sh 'mvn test -e' 
 
     echo "Archiving test reports"
     archiveArtifacts artifacts: 'target/surefire-reports/*.xml', fingerprint: true
