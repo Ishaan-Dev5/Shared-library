@@ -3,7 +3,7 @@ def call() {
     git url: 'https://github.com/Ishaan-Dev5/salary-api.git', branch: 'main'
 
     echo "Running unit tests"
-    sh 'mvn clean test -x' 
+    sh 'mvn clean test ' 
 
     echo "Archiving test reports"
     archiveArtifacts artifacts: 'target/surefire-reports/*.xml', fingerprint: true
