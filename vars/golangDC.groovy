@@ -13,7 +13,7 @@ def goHome = tool name: 'GoLang', type: 'go'
         echo "Error details: ${err}"
     }
 
-archiveArtifacts artifacts: '**/*.html', allowEmptyArchive: true
+
 
 }
   
