@@ -1,6 +1,7 @@
 def call(){
 def goHome = tool name: 'GoLang', type: 'go'
     env.PATH = "${goHome}/bin:${env.PATH}"
+    
   try {
         snykSecurity(
             snykInstallation: 'snyk_tool',   // Jenkins me configured Snyk installation
