@@ -14,6 +14,7 @@ def goHome = tool name: 'GoLang', type: 'go'
         echo "Snyk scan detected vulnerabilities, but pipeline will continue."
         echo "Error details: ${err}"
     }
-}
 
+archiveArtifacts artifacts: 'snyk-report.html', allowEmptyArchive: true
+}
   
