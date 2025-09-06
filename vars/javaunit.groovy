@@ -4,7 +4,7 @@ def call() {
 
     echo "Running unit tests"
     // Run tests but don't fail the pipeline
-    sh 'mvn clean test || true'
+    sh 'mvn clean test '
 
     echo "Archiving test reports"
     archiveArtifacts artifacts: 'target/surefire-reports/*.xml', fingerprint: true
