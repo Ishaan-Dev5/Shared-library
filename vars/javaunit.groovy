@@ -1,6 +1,6 @@
 def call() {
     // Clone the repo
-    git url: 'https://github.com/Snaatak-Cloudops-Crew/salary-api.git', branch: 'main'
+    git url: 'https://github.com/Ishaan-Dev5/salary-api.git', branch: 'main'
 
     echo "Running unit tests"
     // Run tests but don't fail the pipeline
